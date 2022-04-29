@@ -65,7 +65,8 @@ Add AdMob key and application ID to the app's **android/app/src/main/AndroidMani
     <application>
 <manifest>
 ```
-Where **APPLICATION_ID** and **ADMOB_KEY** are identifiers that we will provide you.
+Where **ADMOB_KEY** are identifier that we will provide you.
+**APPLICATION_ID** is your PlayStore ID.
 
 ### iOS
 
