@@ -48,35 +48,34 @@ InAppSdk().androidApiKey = "ef0bc3f8-0f12-45e3-8761-f65c88f1f96e";
 InAppSdk().iOSApiKey = "ef0bc3f8-0f12-45e3-8761-f65c88f1f96e";
 ```
 
-## 2. Add provided AdMob keys to iOS and Android subprojects
+## 2. Add provided Google App IDs to iOS and Android subprojects
 
-We will also provide you AdMob keys and application ID for platform subprojects which are required for InApp SDK. Set them as described below.
+We will provide you with Google App IDs for both platform subprojects which are required for InApp SDK. Set them as described below.
 
 ### Android
 
-Add AdMob key and application ID to the app's **android/app/src/main/AndroidManifest.xml** file by adding a **meta-data** tag with the name **com.google.android.gms.ads.APPLICATION_ID** as at example below:
+Add Google App ID to the app's **android/app/src/main/AndroidManifest.xml** file by adding a **meta-data** tag with the name **com.google.android.gms.ads.APPLICATION_ID** as at example below:
 
 ```xml
 <manifest>
     <application>
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ADMOB_KEY"/>
+            android:value="GOOGLE_APP_ID"/>
     <application>
 <manifest>
 ```
-Where **ADMOB_KEY** are identifier that we will provide you.
-**APPLICATION_ID** is your PlayStore ID.
+Where **GOOGLE_APP_ID** is an identifier that we will provide you and **APPLICATION_ID** is your PlayStore ID.
 
 ### iOS
 
-Add AdMob key to the **ios/Runner/info.plist** file. You need to set a new key with AdMob key as a value as at example below:
+Add Goole App ID to the **ios/Runner/info.plist** file. You need to set a new key with Google App ID as a value as at example below:
 
 ```xml
 <key>GADApplicationIdentifier</key>
-<string>ADMOB_KEY</string>
+<string>GOOGLE_APP_ID</string>
 ```
-Where **ADMOB_KEY** is identifier that we will provide you.
+Where **GOOGLE_APP_ID** is an identifier that we will provide you with.
 
 ## 3. Initialize SDK
 
