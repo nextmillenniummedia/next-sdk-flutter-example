@@ -95,7 +95,7 @@ void main() async {
 
   // set InApp API keys for both platforms
   InAppSdk().androidApiKey = "INAPP_API_KEY";
-  InAppSdk().iOSApiKey = "IN_APP_KEY";
+  InAppSdk().iOSApiKey = "INAPP_APP_KEY";
 
   // initialize SDK
   await InAppSdk().initialize();
