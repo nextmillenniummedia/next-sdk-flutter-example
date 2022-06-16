@@ -2,7 +2,23 @@
 
 Manual mode is a way of serving ads in your apps where publisher manually adjusts ad placing and does all of the ad management on his own. This way of integration allows more customization compared to Dynamic method, however Manual mode is recommended for advanced users.
 
-First, you need to get configurated InApp ad unit from your manager. Use it’s ID to next ads.
+First, you need to get two (for both platforms) configurated InApp ad units from your manager. Implement current platform check and use their IDs to show ads.
+
+For example, you can add ad units to constants storage:
+```dart
+/// Constants used in the app.
+class Constants {
+  ...
+
+  // Banner Ads
+  static const androidBannerAdUnitId = "*your Android banner ad unit ID*";
+  static const iosBannerAdUnitId = "*your iOS banner ad unit ID*";
+
+  // Interstitial Ads
+  static const androidInterstitialAdUnitId = "*your Android interstitial ad unit ID*";
+  static const iosInterstitialAdUnitId = "*your iOS interstitial ad unit ID*";
+}
+```
 
 ## Banner Ads
 
@@ -26,7 +42,13 @@ class ExampleWidget extends StatelessWidget {
     return ListView(children: [
       // some widgets with your content.
       ...
-      InAppBannerFutureWidget(inAppId: "*your InApp ad unit ID*", listener: getListener(context)),
+      InAppBannerFutureWidget(
+            inAppId: Platform.isAndroid
+                // use Android banner ad unit for Android
+                ? Constants.androidBannerAdUnitId
+                // use iOS banner ad unit for iOS
+                : Constants.iosBannerAdUnitId,
+            listener: getListener(context)),
       ...
     ]);
   }
@@ -54,7 +76,13 @@ class ExampleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // use loadAndShow() func to immediately show ad. you can also add some condition when ad will be showing.
-    InAppInterstitialAd(adUnitId: "*your InApp ad unit ID*", listener: getListener(context))
+    InAppInterstitialAd(
+            adUnitId: Platform.isAndroid
+                // use Android interstitial ad unit for Android
+                ? Constants.androidInterstitialAdUnitId
+                // use iOS interstitial ad unit for iOS
+                : Constants.iosInterstitialAdUnitId,
+            listener: getListener(context))
         .loadAndShow();
     return ListView(children: [
       // some widgets with your content.
