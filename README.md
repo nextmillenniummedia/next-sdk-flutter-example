@@ -6,7 +6,7 @@
 
 This repo contains docs about InApp SDK for Flutter. [Contact us](https://nextmillennium.io/) to learn more about product and get example application with intergrated SDK.
 
-***Current SDK version**:* 0.1.0
+***Current SDK version**:* 0.1.1
 
 **Note:** SDK is still in development and new versions can contain breaking changes. Please read release notes when you're going to update.
 
@@ -29,3 +29,5 @@ Check the docs below to learn about all the features we provide.
 **2.** [Integrate Ad Formats Dynamically](https://github.com/nextmillenniummedia/inapp-flutter-example/blob/main/docs/Integrate%20Ad%20Formats%20Dynamically.md)
 
 **3.** [Integrate Ad Formats Manually](https://github.com/nextmillenniummedia/inapp-flutter-example/blob/main/docs/Integrate%20Ad%20Formats%20Manually.md)
+
+**4.** [Test Your Integration](https://github.com/nextmillenniummedia/inapp-flutter-example/blob/main/docs/Test%20Your%20Integration.md)
