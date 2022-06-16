@@ -9,7 +9,7 @@ Test ads with either **Android Emulator** or **iOS Simulator** at this stage.
 If everything's done correctly you should be able to display ads with **Test mode** label, for example:
 
 <p align="center">
-<img src="https://github.com/nextmillenniummedia/inapp-ios-example/blob/main/docs/images/test_ads_banner.png" height="480">
+<img src="https://github.com/nextmillenniummedia/inapp-flutter-example/blob/main/docs/images/test_ads_banner.png" height="480">
 </p>
 
 For the next step you'll be required to enable a flag when initialize SDK which would signal SDK to serve test ads while in **Release** build.
