@@ -9,7 +9,7 @@ Test ads with either **Android Emulator** or **iOS Simulator** at this stage.
 If everything's done correctly you should be able to display ads with **Test mode** label, for example:
 
 <p align="center">
-<img src="https://github.com/nextmillenniummedia/inapp-flutter-example/blob/main/docs/images/test_ads_banner.png" height="480">
+<img src="https://github.com/nextmillenniummedia/next-sdk-flutter-example/blob/main/docs/images/test_ads_banner.png" height="480">
 </p>
 
 For the next step you'll be required to enable a flag when initialize SDK which would signal SDK to serve test ads while in **Release** build.
@@ -17,7 +17,7 @@ For the next step you'll be required to enable a flag when initialize SDK which 
 Enabling a flag is required, since if we don't get a signal we won't be able to serve test ads on each request made.
 
 ```dart
-await InAppSdk().initialize(onTestMode: true);
+await NextSdk().initialize(onTestMode: true);
 ```
 
 **Important**: For iOS 14+ you need also give access to IDFA so we can generate device ID based on it. We recommend you to use [app_tracking_transparency](https://pub.dev/packages/app_tracking_transparency) library. Or you can do it by your custom way.
@@ -28,7 +28,7 @@ Once done, you are encouraged to publish your app to **App Tester / TestFlight**
 
 ### App-ads.txt
 
-By the time testing `app-ads.txt` **must** be added into your developer website, for example: `example.com/app-ads.txt`
+By the time testing, `app-ads.txt` **must** be added into your developer website, for example: `example.com/app-ads.txt`
 
 Please, contact your account manager (*support@nextmillennium.io*) so you'll be provided with a proper file to add.
 
@@ -43,7 +43,7 @@ If something's not working for you at this stage, don't hesitate and contact our
 Once you're sure that everything works as intended make sure to disable the test flag before the app release on SDK initialization:
 
 ```dart
-await InAppSdk().initialize(onTestMode: false);
+await NextSdk().initialize(onTestMode: false);
 ```
 
 ## Step 3: Play Store / App Store
